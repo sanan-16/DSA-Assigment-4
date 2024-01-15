@@ -1,0 +1,30 @@
+AVL Trees:
+Purpose:
+
+AVL trees are a type of self-balancing binary search tree.
+The primary purpose is to maintain balance, ensuring that the height difference between the left and right subtrees of any node (known as the balance factor) is at most 1.
+Balancing Mechanism:
+
+After every insertion or deletion, AVL trees check and adjust the balance factor of each node.
+If the balance factor violates the balance criterion, rotations (single or double rotations) are performed to restore balance.
+Advantages:
+
+Provides fast search, insert, and delete operations with a guaranteed logarithmic height.
+Well-suited for scenarios where a balanced tree is crucial, such as real-time systems and databases.
+Red-Black Trees:
+Purpose:
+
+Red-Black trees are another type of self-balancing binary search tree.
+The primary purpose is to maintain balance while allowing for a slightly more relaxed balancing condition compared to AVL trees.
+Balancing Mechanism:
+
+Each node in a Red-Black tree is assigned a color (either red or black).
+The tree is structured to adhere to specific rules, including maintaining the same number of black nodes on any path from the root to a leaf.
+After insertions or deletions, the tree is adjusted by performing color changes and rotations.
+Advantages:
+
+Slightly more permissive balancing rules compared to AVL trees, leading to faster insertions and deletions.
+Still ensures a logarithmic height, providing efficient search operations.
+Commonly used in scenarios where there is a mix of search, insert, and delete operations, such as in many standard libraries and databases.
+Achieving Optimal Performance:
+Both AVL trees and Red-Black trees achieve optimal performance by ensuring that the height of the tree remains logarithmic. This logarithmic height guarantees efficient search operations with a time complexity of O(log n), where n is the number of nodes in the tree.

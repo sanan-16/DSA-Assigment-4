@@ -1,0 +1,28 @@
+Process of Deleting a Node:
+Find the Node to Delete:
+
+Start at the root and navigate through the tree to find the node containing the element you want to delete.
+Identify Cases:
+
+Once you find the node, identify its type based on the number of children:
+If the node is a leaf (has no children), delete it directly.
+If the node has one child, replace the node with its child.
+If the node has two children, find its in-order successor (the smallest node in its right subtree), replace the node's value with the in-order successor's value, and then recursively delete the in-order successor.
+Handling Leaf Nodes:
+
+If the node to be deleted is a leaf (has no children), simply remove the node from the tree.
+Handling Nodes with One Child:
+
+If the node to be deleted has one child, replace the node with its child.
+Update the parent of the node to be deleted to point to its child.
+Delete the node.
+Handling Nodes with Two Children:
+
+If the node to be deleted has two children, find its in-order successor (the smallest node in its right subtree).
+Copy the value of the in-order successor to the node to be deleted.
+Recursively delete the in-order successor (which has become a duplicate in the tree).
+Handling Edge Cases - Leaf Nodes with Two Children:
+When dealing with a leaf node that has two children, the process remains the same. The in-order successor in this case will be the smallest node in the right subtree of the leaf node. The key is to replace the leaf node's value with the in-order successor's value and then recursively delete the in-order successor (which is guaranteed to have zero or one child).
+
+Time Complexity:
+The time complexity of deleting a node from a BST is O(h), where h is the height of the tree. For a balanced tree, the height is logarithmic (O(log n)), ensuring efficient deletion. However, in the worst case of a skewed tree, the height can be equal to the number of nodes (O(n)), leading to less efficient deletion.
